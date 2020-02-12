@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>k8splus-实施案例</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, user-scalable=yes"-->
+    <meta id="vp" name="viewport" content="width=device-width, initial-scale=0.4, minimum-scale=0.4, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="css/PublicStyle.css?v=7380" />
+    <link rel="stylesheet" type="text/css" href="css/layui.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="http://www.smarterapps.cn/public/themes/newstyle/css/main.css?v=7768"/>-->
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="shortcut icon" href="img/logoico.ico" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/layui.css  "/>
+    <script src="js/animateToClass.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--<script>-->
+        <!--var _UID_   = 0;-->
+        <!--var _MID_   = 0;-->
+        <!--var _ROOT_  = '';-->
+        <!--var _THEME_ = 'http://www.smarterapps.cn/public/themes/newstyle';-->
+        <!--var _PUBLIC_ = 'http://www.smarterapps.cn/public';-->
+        <!--var _LANG_SET_ = 'zh-cn';-->
+        <!--var $CONFIG = {};-->
+        <!--$CONFIG['uid'] = _UID_;-->
+        <!--$CONFIG['mid'] = _MID_;-->
+        <!--$CONFIG['root_path'] = _ROOT_;-->
+        <!--$CONFIG['theme_path'] = _THEME_;-->
+        <!--$CONFIG['public_path'] = _PUBLIC_;-->
+        <!--$CONFIG['lang'] =  'zh-cn';-->
+    <!--</script>-->
+    <!--<script type='text/javascript'>-->
+        <!--var _vds = _vds || [];-->
+        <!--window._vds = _vds;-->
+        <!--(function () {-->
+            <!--_vds.push(['setAccountId', 'a7441887fcf4e086']);-->
+            <!--(function () {-->
+                <!--var vds = document.createElement('script');-->
+                <!--vds.type = 'text/javascript';-->
+                <!--vds.async = true;-->
+                <!--vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';-->
+                <!--var s = document.getElementsByTagName('script')[0];-->
+                <!--s.parentNode.insertBefore(vds, s);})();-->
+        <!--})();-->
+    <!--</script>-->
+</head>
+<body style="background:#f8f8f8;">
+<style>
+    .zcy_inMenuSonEjBox a em{top:-15px;}
+    .zcy_menu a > span > img{margin-top:-33px;}
+	table { border:0; width: 90%;}
+	table td {padding: 10px 20px; border: 1px solid #cccccc; }
+</style>
+
+<div class="zcy_topBox" style="height: 35px">
+    <div class="zcy_top">
+        <!--<p>面向项目的容器云管理平台</p>-->
+        <!--<button class="yellow">注册</button>-->
+        <button style="color: white;font-size: 14px;margin-top:0px" onclick="location.href='./docs'">使用手册</button>
+    </div>
+</div>
+<div class="zcy_indexBannerAndNav" style="height:89px;">
+    <div class="zcy_INnavBox">
+        <div class="zcy_nav">
+            <div class="zcy_logo"><a href="index.html"><img src="img/logo.png" style="margin-top: 20px"></a></div>
+            <div class="zcy_menu">
+                <b><a href="index.html" >首页</a></b>
+                <b> <a href="product.html" class="navTag">产品概述</a></b>
+                <b><a href="CarryoutPlan.html" class="navTag">实施案例</a></b>
+                <!--<a href="">帮助文档</a>-->
+                <b> <a href="updateHistory.html">发布订阅</a></b>
+                <!--<a href=""style="margin-right:0">关于我们</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var index = 0,intertime = 7000;
+        var inter = setInterval(scrollBan, intertime);
+
+        $(".zcy_indexBannerTag a").click(function () {
+            index = $(this).index();
+            $(".zcy_indexBannerTag a").removeClass("act").removeAttr("style");
+            $(this).animate({ width: "28px", height: "8px", opacity: 1 }, 500);
+            $(this).parents(".zcy_indexBanner").find(".zcy_indexBannerMsg").hide().eq($(this).index()).fadeIn();
+        });
+
+        $(".zcy_indexBannerTag a").mouseenter(function () {
+            clearInterval(inter);
+        });
+        $(".zcy_indexBannerTag a").mouseleave(function () {
+            inter = setInterval(scrollBan, intertime)
+        });
+        function scrollBan()
+        {
+            index++;
+            if (index == 4)
+                index = 0;
+
+            var ba = $(".zcy_indexBannerTag a");
+            ba.removeClass("act").removeAttr("style").eq(index).animate({ width: "28px", height: "8px", opacity: 1 }, 500);
+            ba.eq(index).parents(".zcy_indexBanner").find(".zcy_indexBannerMsg").hide().eq(ba.eq(index).index()).fadeIn();
+        }
+        $(".News").mouseover(function () {
+            $('.News ul').css("display",'block');
+        });
+        $(".News").mouseout(function () {
+            $('.News ul').css("display",'none');
+        });
+        $(".UserId").mouseover(function () {
+            $('.UserId ul').css("display",'block');
+        });
+        $(".UserId").mouseout(function () {
+            $('.UserId ul').css("display",'none');
+        });
+    });
+</script>
+
+
+<div class="zcy_AboutBanner">
+    <!--<div class="zcy_aboutTag">-->
+        <!--<a href="javascript:void(0)" data=1 class="act">最小需求</a>-->
+        <!--<a href="javascript:void(0)" data=2 >完成时间</a>-->
+    <!--</div>-->
+</div>
+<!--最小需求 #e2e2e2-->
+<div class="aboutUs" style="background-color:#2980B9;">
+    <div style="background-color:#f8f8f8; margin-top: 30px;height:440px">
+    <div class="demo" style="background-color: white;width: 84.7%;margin-left: 7.8%;height: 410px" >
+        <p style="color: #333333;margin-left: 1%;padding-top: -10px;font-size: 18px">平台实施</p><br>
+
+        <div class="container" style="height: 280px">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <div class="timeline" data-heading="&nbsp;&nbsp;&nbsp;T1">
+                            <div class="timeline-content" style="height: 100px">
+                                <p class="description">
+                                    硬件资源准备
+                                </p>
+                                    <!--<a href="#" class="read-more">read more</a>-->
+                            </div>
+                            <span class="year">
+		                                <span>T1</span>
+		                            </span>
+                        </div>
+
+                        <div class="timeline" data-heading="&nbsp;&nbsp;&nbsp;T2">
+                            <div class="timeline-content" style="height: 100px">
+                                <p class="description">
+                                    检查系统用户权限、授权、系统补丁、证书、资源
+                                </p>
+                            </div>
+                            <span class="year">
+		                                <span>T2</span>
+		                            </span>
+                        </div>
+
+                        <div class="timeline" data-heading="&nbsp;&nbsp;&nbsp;T3">
+                            <div class="timeline-content" style="height: 100px">
+                                <p class="description">容器云管理集群、相关组件部署,调试k8splus服务、k8s集群、相关组件的可用性</p>
+                                <!--<a href="#" class="read-more">read more</a>-->
+                            </div>
+                            <span class="year">
+		                                <span>T3</span>
+		                     </span>
+                        </div>
+
+                        <div class="timeline" data-heading="&nbsp;&nbsp;&nbsp;T4">
+                            <div class="timeline-content" style="height: 100px">
+                                <p class="description">
+                                    正式使用<br>应用验证、协同                                </p>
+                                <!--<a href="#" class="read-more">read more</a>-->
+                            </div>
+                            <span class="year">
+		                                  <span>T4</span>
+		                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <h3 style="color: #fff;margin-left: 7.8%;padding-top: 30px;font-size: 18px" >最小需求</h3>
+    <!--<div class="row">-->
+    <div class="zcy_aboutMsg" style="margin-left: 8.8%;width: 82%">
+        <p style="color:#fff;">最小部署集合使用5台主机，一台Master，两台Node方式部署，一台NFS服务器，一台ES存储服务器。在kubernetes重新安装完成后，会自动创建k8s，etcd帐户。如果做系统安全加固，确保这两个帐户名称可用</p>
+    </div>
+
+
+    <!--</div>-->
+    <div class="zcy_sysQW" style="margin-top: 10px">
+        <!--<div class="zcy_sysQWTxt" >-->
+            <!--&lt;!&ndash;<span>泰尔终端实验室的测试资质</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<p>泰尔终端实验室在通信信息领域具有长期积累，获得了全面的测试资质，其测试结果可以得到通信信息行业中各大企业和政府的深度认可。</p>&ndash;&gt;-->
+        <!--</div>-->
+
+        <table border="4" cellpadding="20" cellspacing="0"  bgcolor="#333333" style="margin-left:5%;">
+
+
+            <tr bgcolor="#add8e6" >
+                <td  class="titleSize">角色</td>
+                <td   class="titleSize">数量</td>
+                <td  class="titleSize">CPU(G)</td>
+                <td  class="titleSize">内存(G)</td>
+                <td   class="titleSize">磁盘寻求(G)</td>
+                <td   class="titleSize">账号需求</td>
+            </tr>
+            <tr bgcolor="white">
+                <td   class="titleSize">k8s-master</td>
+                <td   class="titleSize">一个或一个以上<br>生产集群需要3台(高可用配置)</td>
+                <td   class="titleSize">4</td>
+                <td   class="titleSize">8</td>
+                <td   class="titleSize">100</td>
+                <td   class="titleSize">提供- -个具备sudo权限账号， 同时能远程访问。同时确保系统可创建k8s、etcd的账号。</td>
+            </tr>
+
+            <tr bgcolor="white">
+                <td   class="titleSize">k8s-node</td>
+                <td   class="titleSize">2台或以上<br>生产系统要根据实际进行估算。<br>k8s在节点上运行资源消耗很小，不足5%</td>
+                <td   class="titleSize">8</td>
+                <td   class="titleSize">16</td>
+                <td   class="titleSize">300</td>
+                <td   class="titleSize">提供-个具备sudo权限账号，同时能远程访问。同时确保系统可创建k8s、etcd的账号。</td>
+            </tr>
+
+            <tr bgcolor="white">
+                <td   class="titleSize">nfs服务器</td>
+                <td   class="titleSize">1台或以上</td>
+                <td   class="titleSize">4</td>
+                <td   class="titleSize">8</td>
+                <td   class="titleSize">1T以上</td>
+                <td   class="titleSize"></td>
+            </tr>
+
+            <tr bgcolor="white">
+                <td   class="titleSize">elasticsearch服务器</td>
+                <td   class="titleSize">1台或以上</td>
+                <td   class="titleSize">4</td>
+                <td   class="titleSize">16</td>
+                <td   class="titleSize">1T以上</td>
+                <td   class="titleSize"></td>
+            </tr>
+
+
+        </table>
+
+        <br><br><br>
+
+
+    </div>
+
+
+
+
+</div>
+<div class="zcy_sysQW" style="margin-top: 20px;background-color: white">
+    <br>
+<b><span style="color: #333333;margin-left: 2.4%;font-size: 18px;">组件资源需求</span></b>   <br>
+
+    <table border="4" cellpadding="20" cellspacing="0" width="100%" bgcolor="#faebd7" style="margin-left:5%;margin-top: 20px">
+
+
+    <tr bgcolor="#add8e6" >
+        <td class="titleSize">类别</td>
+        <td class="titleSize">软件名称</td>
+        <td class="titleSize">CPU核数</td>
+        <td class="titleSize">内存(G)</td>
+        <td class="titleSize">备注</td>
+    </tr>
+    <tr bgcolor="white">
+        <td rowspan="6" class="titleSize">Kubernetes</td>
+        <td  class="titleSize">docker</td>
+        <td class="titleSize">-</td>
+        <td class="titleSize">-</td>
+        <td class="titleSize">| docker基础服务</td>
+        <!--<td>提供- -个具备sudo权限账号， 同时能远程访问。同时确保系统可创建k8s、etcd的账号。</td>-->
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">dashboard</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">k8s页面服务</td>
+
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">heapster</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize"></td>
+
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">core dns</td>
+        <td class="titleSize">1.5</td>
+        <td class="titleSize">3</td>
+        <td class="titleSize">k8s- dns服务</td>
+
+    </tr>
+
+    <tr bgcolor="white">
+
+        <td class="titleSize">calico</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">网络组件，每个主机上需要500m没存， 0.5个CPU</td>
+
+    </tr>
+
+
+    <tr bgcolor="white">
+
+        <td class="titleSize">nexus</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">4</td>
+        <td class="titleSize">私服镜像仓库，该目录的权限为: chown -R 200:200</td>
+
+    </tr>
+
+
+
+    <tr bgcolor="white">
+        <td  class="titleSize" rowspan="6">Kubernetes监控</td>
+        <td class="titleSize">grafana</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">临时缓存目录</td>
+        <!--<td>提供- -个具备sudo权限账号， 同时能远程访问。同时确保系统可创建k8s、etcd的账号。</td>-->
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">prmetheus</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">4</td>
+        <td class="titleSize">每台主机都需要该资源</td>
+
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">kube-state -metrics</td>
+        <td class="titleSize"></td>
+        <td class="titleSize"></td>
+        <td class="titleSize"></td>
+
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">nodeexport</td>
+        <td class="titleSize">3</td>
+        <td class="titleSize">4</td>
+        <td class="titleSize">4|每台主机都需要该资源</td>
+
+    </tr>
+
+    <tr bgcolor="white">
+
+        <td class="titleSize">calico</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">网络组件，每个主机上需要500m没存， 0.5个CPU</td>
+
+    </tr>
+
+
+    <tr bgcolor="white">
+        <td class="titleSize">k8splus1.0</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize">1</td>
+        <td class="titleSize"></td>
+
+    </tr>
+
+    <tr bgcolor="white">
+        <td  class="titleSize" rowspan="3">持续构建软件</td>
+        <td class="titleSize">Sonar Qube</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">4</td>
+        <td class="titleSize">SonarQube插件目录</td>
+        <!--<td>提供- -个具备sudo权限账号， 同时能远程访问。同时确保系统可创建k8s、etcd的账号。</td>-->
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">Jenkins</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">4</td>
+        <td class="titleSize">Jenkins数据保存目录,该目录的权限为: chown -R1000:1000</td>
+
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">gitlab</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">4</td>
+        <td class="titleSize">Gitlab所需的配置文件保存目录,该目录的权限为:1000:1000</td>
+
+    </tr>
+
+
+
+    <tr bgcolor="white">
+        <td  class="titleSize" rowspan="2">日志</td>
+        <td  class="titleSize">fluentd</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">2</td>
+        <td class="titleSize">每台主机都需要该资源</td>
+        <!--<td>提供- -个具备sudo权限账号， 同时能远程访问。同时确保系统可创建k8s、etcd的账号。</td>-->
+    </tr>
+    <tr bgcolor="white">
+
+        <td class="titleSize">elasticsearch</td>
+        <td class="titleSize">4</td>
+        <td class="titleSize">16</td>
+        <td class="titleSize"></td>
+
+    </tr>
+
+</table>
+<br><br><br>
+</div>
+
+<div class="history"  style="display: none;">
+
+</div>
+<div class="zcy_indexCopy">
+    <p>保留所有权利©2019. Asiainfo CUC 技术中心解决方案部联系方式：liuyang@asiainfo.com</p>
+</div>
+<style>.zcy_indexFootSer p em{margin:0 10px;}
+
+.titleSize{
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+}
+.titleSize2{
+    font-size: 13px;
+    color: #333333
+}
+
+
+</style>
+
+
+</body>
+</html>
+
+
+<script>
+    $(function () {
+        $(".zcy_aboutTag a").click(function () {
+            $(".zcy_aboutTag a").removeClass("act");
+            $(this).addClass("act");
+            var i=$(this).attr('data');
+            if(i==2){
+                $('.history').css('display','block');
+                $('.aboutUs').css('display','none');
+            }else{
+                $('.history').css('display','none');
+                $('.aboutUs').css('display','block');
+            }
+        });
+        $(".zcy_sysQWGave").children("div").mouseenter(function () {
+            $(this).children().hide();
+        });
+        $(".zcy_sysQWGave").children("div").mouseleave(function () {
+            $(this).children().show();
+        });
+    });
+</script>

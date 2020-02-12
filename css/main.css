@@ -1,7 +1,7 @@
 
 /*澶撮儴*/
 .zcy_topBox{width:100%; height:50px; background: #292f35;}
-.zcy_top{width:1200px; height:50px; margin:0 auto;}
+.zcy_top{width:1200px; height:35px; margin:0 auto;}
 .zcy_top p{float:left; font-size:16px; line-height: 50px; color:#ffffff;}
 .zcy_top span{float:right; color:#ffffff; font-size:14px; line-height: 50px;  padding:0 15px; display: inline-block;}
 .zcy_top span.UserId{position:relative;}
@@ -28,7 +28,7 @@
 .zcy_top span.noLeft{margin-left:0;}
 .zcy_top span:hover{color:#ffffff; background: #000000; cursor: pointer;}
 
-.zcy_top button{float:right; width:86px; height:34px; border-radius:4px; text-align: center;  background: #292F35; margin-top:8px; margin-right:17px;}
+.zcy_top button{float:right; width:86px; height:34px; border-radius:4px; text-align: center;  background: #292F35; margin-top:0px; margin-right:17px;}
 .zcy_top button.blue{ border:solid 2px #1d7fd1;color:#1d7fd1;}
 .zcy_top button.blue:hover{cursor: pointer; background: #1b1f24;}
 .zcy_top button.yellow{ border:solid 2px #ffae00;color:#ffae00;}
@@ -65,8 +65,8 @@
 .zcy_menu2 a:hover{border-bottom:solid 2px #1a8dee; color:#1a8dee;}
 
 .zcy_helpBanner{width:100%; height:422px; background: url(../img/help_banner.jpg) center; -webkit-background-size: cover; -o-background-size: cover; }
-.zcy_helpBanner h1{float:left; width:100%;font-size:32px;  text-align: center; color:#ffffff; font-weight: normal; margin-top:40px;}
-.zcy_helpBanner h2{font-size:18px; line-height: 48px; color:#ffffff; text-align: center;}
+.zcy_helpBanner h1{float:left; width:100%;font-size:32px;  text-align: center; color:#ffffff; font-weight: normal; margin-top:40px; line-height: 80px;}
+.zcy_helpBanner h2{font-size:18px; line-height: 36px; color:#ffffff; text-align: center;}
 
 .zcy_helpDetailBanner{width:100%; height:148px; background: url(../img/help_detailBg.jpg) center;-webkit-background-size: cover; -o-background-size: cover; }
 .zcy_helpDetailBanner h1{width:100%; text-align: center; color:#ffffff; line-height: 148px; font-weight: normal;}
@@ -106,7 +106,7 @@
 .zcy_chinese{float:right; margin-top:20px;}
 .zcy_chinese a{color:#666666; width:30px; height:23px;  display:inline-block; line-height: 23px; font-size:14px; padding-left:28px; background: url(../img/gq.png) no-repeat; }
 
-/*甯姪璇︽儏*/
+/*甯姪璇︽儏*/
 .zcy_whiteBg{width:100%; background: #ffffff; overflow: hidden;}
 
 .zcy_path{width:1200px; height:80px;  margin:0 auto; font-size:12px; line-height: 80px; color:#333333;}
@@ -213,7 +213,7 @@
 .zcy_csfwBanner2{width:100%; height:150px; background: url(../img/csfwBanner2.jpg) center;-webkit-background-size: cover; -o-background-size: cover; }
 .zcy_floatTel a:hover{filter:alpha(opacity=80); opacity: 0.8;}
 
-/*鍏煎鎬ф祴璇�*/
+/*鍏煎鎬ф祴璇�*/
 .zcy_jrxBanner{width:100%; height:400px; background: url(../img/jrxBanner.jpg) no-repeat center; -webkit-background-size: cover; -o-background-size: cover; }
 .zcy_jrxBannerTxt h1{text-align: center; font-size:72px; color:#ffffff;line-height: 60px; font-weight: lighter; padding-top:80px; margin:0 auto;}
 .zcy_jrxBannerTxt p{width:100%; height:35px; display:block; margin:0 auto; text-align: center; font-size:20px; font-weight:lighter; color:#ffffff; margin-top:20px;}
@@ -277,7 +277,7 @@
 .zcy_comPhoneR dl dd a:hover{text-decoration: underline;}
 .zcy_jrxBanner2{width:100%; height:150px; background: url(../img/jrxBanner2.jpg) center;-webkit-background-size: cover; -o-background-size: cover; }
 
-/*鍏煎鎬ф祴璇�-閫夋嫨缁堢*/
+/*鍏煎鎬ф祴璇�-閫夋嫨缁堢*/
 .zcy_jrxTag{width:1200px;  margin:0 auto; margin-top:30px; }
 .zcy_jrxTag a{float:right;  width:118px; height:50px; margin-right:40px; line-height:50px; font-size:18px; color:#37689c; display: block;}
 .zcy_jrxTag a:hover{border-bottom: solid 5px #ffae00;color:#37689c;}
@@ -761,25 +761,26 @@
 
 /*缃戠粶鍙嬪ソ娴嬭瘯*/
 .zcy_NetBanner{width:100%; height:400px; background: url(../img/Netbanner.png) no-repeat center;-webkit-background-size: cover; -o-background-size: cover;  text-align: center;}
-.zcy_netDeepMsg{width:100%; height:675px; background: #243b56;}
+.zcy_netDeepMsg{width:100%; height:720px; background: #3171e9;}
 .zcy_netDeepMsgBox{position:relative; width:1200px; height:500px; margin:0 auto; text-align: center;}
-.zcy_netDeepMsgBox h1{ text-align: center; font-size:30px; line-height: 100px; color:#ffffff; font-weight: normal;}
-.zcy_netDeepMsgBox p{width:50%; margin:0 auto; font-size:16px; color:#ffffff; line-height: 28px; text-align: center;}
-.zcy_netDeepMsgBox a{text-align:center; color:#f5a806;  line-height: 50px; font-size:20px}
+.zcy_netDeepMsgBox h1{ text-align: center; font-size:36px; line-height: 140px; color:#ffffff; font-weight: normal;}
+.zcy_netDeepMsgBox p{width:90%; margin:0 auto; font-size:16px; color:#ffffff; line-height: 36px; text-align: center;}
+.zcy_netDeepMsgBox a{text-align:center; color:#f5a806;  line-height: 80px; font-size:20px;}
+.zcy_netDeepMsgBox a:hover { color:#ffffff;}
 .zcy_netDeepMsgBox ul {width:400px; margin:0 auto;}
 .zcy_netDeepMsgBox ul li{float:left; width:200px; }
 .zcy_netDeepMsgBox ul li p{width:100%; font-size:16px; line-height: 30px; color:#93b4d2;}
-.zcy_netComputer{position:absolute; bottom:-300px; left:50%; width:800px; height:468px; margin-left:-400px;}
+.zcy_netComputer{position:absolute; bottom:-280px; left:50%; width:800px; height:468px; margin-left:-400px;}
 
 .zcy_dir2{width:100%; height:130px; background: #f8f8f8;;}
 
 .zcy_comGn2{width:1200px; margin:70px auto; overflow: hidden;}
 .zcy_comGn2 h1{font-size:30px; line-height: 80px; text-align: center; font-weight: normal; color:#333333;}
 .zcy_comGn2 ul{overflow: hidden;}
-.zcy_comGn2 ul li{float:left; width:380px; height:300px; background:#292f35; text-align: center; margin-right: 30px;color:#aaaaaa;}/*newv1*/
+.zcy_comGn2 ul li{float:left; width:380px; height:380px; background:#292f35; text-align: center; margin-right: 30px;color:#aaaaaa;}/*newv1*/
 .zcy_comGn2 ul li img{filter:alpha(opacity=50);opacity: 0.5;}/*newv1*/
 .zcy_comGn2 ul li h1{font-size:24px; color:#ffffff; font-weight: normal; line-height: 50px; margin-top:20px; margin-bottom: 10px;}/*newv1*/
-.zcy_comGn2 ul li p{ text-align:center; width:100%;  line-height: 25px; padding:20px; padding-top:0px; box-sizing: border-box;}/*newv1*/
+.zcy_comGn2 ul li p{ text-align:center; width:100%;  line-height: 30px; padding:20px; padding-top:0px; box-sizing: border-box;}/*newv1*/
 .zcy_comGn2 ul li:hover{/*cursor:pointer;*/ color	:#ffffff;}/*newv1*/
 .zcy_comGn2 ul li:hover img{filter:alpha(opacity=100);opacity: 1;}/*newv1*/
 
@@ -787,7 +788,7 @@
 .zcy_netTestSysBox{width:1200px; margin:0 auto;}
 .zcy_netTestSysBox h1{width:100%;font-size:30px; line-height: 80px; text-align: center; font-weight: normal; color:#333333;}
 
-.zcy_netSysPic{position:relative; width:1141px; height:541px; background:url(../img/net4.png) no-repeat; margin:20px auto;}
+.zcy_netSysPic{position:relative; width:1141px; height:750px; background:url(../img/net4.png) no-repeat; margin:20px auto;}
 
 .zcy_netSysMsg{position:absolute;}
 .zcy_netSysMsg h2{font-size:24px; color:#333333; line-height: 30px; font-weight: normal;}
@@ -796,8 +797,10 @@
 .zcy_netSysMsg.No2{top:70px; right:0; text-align: right;}
 .zcy_netSysMsg.No3{top:255px; left:0}
 .zcy_netSysMsg.No4{top:255px; right:0; text-align: right;}
+.zcy_netSysMsg.No5{top:470px; left:0}
+.zcy_netSysMsg.No6{top:470px; right:0; text-align: right;}
 
-/*----------鏂板鏍峰紡2017-07-14-----------------------------------------------------------------------------------------------*/
+/*----------鏂板鏍峰紡2017-07-14-----------------------------------------------------------------------------------------------*/
 
 .zcy_homeBanner{width:100%;}
 .zcy_homeBanner h1{font-size:72px; color:#ffffff; line-height:400px; text-align: center; font-weight: lighter;}
@@ -861,7 +864,7 @@
 
 .zcy_sysQW{width:1200px; no-repeat ; margin:0 auto; margin-top:50px;}
 .zcy_sysQWTxt{float:left;width:100%; overflow: hidden; margin-top:60px; }
-.zcy_sysQW span{margin-left:50px; font-size:30px; color:#ffffff; border-bottom: solid 5px #ffffff;}
+.zcy_sysQW span{margin-left:50px; font-size:30px; color:#ffffff; border-bottom: solid 5px #3171e9; padding-bottom: 5px;}
 .zcy_sysQW p{width:600px; margin-left:50px; margin-top:23px; color:#ffffff; font-size:18px;  line-height:30px; font-weight: lighter;}
 
 .zcy_sysQWGave{position:relative; width:1200px; height:400px; margin:0 auto; background: #e1e1e1; margin-top:40px;}
@@ -1162,7 +1165,7 @@
 .layui-tab-title.zcy_updateTag{margin-left:130px;}
 
 
-/*----------------2017-07-21鏂板鏍峰紡---------------*/
+/*----------------2017-07-21鏂板鏍峰紡---------------*/
 
 /*AQUA*/
 .zcy_AquaBanner{width:100%; height:400px; background: url(../img/aqua_banner.jpg) no-repeat; -webkit-background-size: cover; -o-background-size: cover; }
@@ -1232,7 +1235,7 @@
 
 .zcy_HQUA_ZS{width:1200px; margin:30px auto;}
 
-/*閲嶈瀵嗙爜*/
+/*閲嶈瀵嗙爜*/
 
 .zcy_setPassword {width:100%; min-height:400px; margin:0 auto; text-align: center; overflow: hidden; background: #ffffff;}
 .zcy_setPassword h1{font-size:20px; line-height: 50px; color:#333333; text-align: center; margin-top:30px;}
@@ -1463,7 +1466,7 @@
 .zcy_indexBannerMsg.No1{background: url(../img/index_banner1.jpg) no-repeat center;}
 .zcy_indexBannerMsg.No2{background: url(../img/index_banner2.jpg) no-repeat center;}
 .zcy_indexBannerMsg.No3{background: url(../img/index_banner3.jpg) no-repeat center;}
-.zcy_indexBannerMsg.No4{background: url(../img/index_banner_indapp_1.png) no-repeat center;}
+.zcy_indexBannerMsg.No4{background: url(../img/index_banner1.jpg) no-repeat center;}
 .zcy_indexBannerMsg.No5{background: url(../img/index_banner_ai.png) no-repeat center;}
 .zcy_indexBannerMsg.No6{background: url(../img/index_banner_p.png) no-repeat center;}
 
@@ -1523,26 +1526,26 @@
 .zcy_indexPlanMask a{width:220px; height:40px; display: inline-block; border:solid 1px #ffffff; line-height: 40px; text-align: center; color:#ffffff;}
 .zcy_indexPlanMask a:hover{background: #ffffff; color:#1a8dee}
 
-.zcy_indexAdv{width:100%; height:650px; background: #282828;  -webkit-background-size: cover; -o-background-size: cover; margin:0 auto; margin-top:30px;}
-.zcy_indexAdvBox{width:1200px; height:650px; margin:0 auto;overflow:hidden;}
+.zcy_indexAdv{width:100%; height:630px; background: #282828;  -webkit-background-size: cover; -o-background-size: cover; margin:0 auto; margin-top:30px;}
+.zcy_indexAdvBox{width:1200px; height:650px; margin:0 auto;overflow:hidden;background: url(../img/indexAdvbg.png) no-repeat left bottom;}
 .zcy_indexAdvBox h1{width:100%; font-size:38px; text-align: center; color:#ffffff; line-height: 120px; font-weight: lighter;}
 .zcy_indexAdvL{float:left; width:295px; overflow: hidden;}
 .zcy_indexAdvL a{width:295px; height:90px; display:inline-block; font-size:20px; line-height:90px;padding-left:30px; color:#ffffff;background: url(../img/indexAdvLBG.png) no-repeat; box-sizing: border-box;}
 .zcy_indexAdvL a:hover{ background: url(../img/indexAdvLBG_hover.png) no-repeat;color:#f1f1f1;}
 
-.zcy_indexAdvR{float:left; width:893px; height:450px; overflow: hidden; margin-left:12px;}
+.zcy_indexAdvR{float:left; width:893px; height:450px; overflow: hidden; margin-left:12px; }
 
 .zcy_adv1{width:100%; overflow: hidden;}
 .zcy_adv1Msg{width:100%; overflow: hidden;}
 .zcy_adv1Msg h2{float:left; width:100%; font-size:25px; color:#ffffff; font-weight: lighter;margin-left:70px }
 .zcy_adv1Msg p{float:left;width:100%;font-size:17px; line-height: 34px; color:#ffffff; margin-top:10px;margin-left:70px}
 .zcy_adv1Msg ul{float:left; width:100%;margin-left:70px }
-.zcy_adv1Msg ul li{float:left; width:33%; margin-top:10px; color:#ffffff; font-size:18px; padding-left:25px; background: url(../img/dg.png) no-repeat; box-sizing: border-box;}
+.zcy_adv1Msg ul li{float:left; width:90%; margin-top:10px; color:#ffffff; font-size:18px; padding-left:25px; background: url(../img/dg.png) no-repeat; box-sizing: border-box;}
 
 .zcy_adv1Msg a{float:left; width:220px; height:40px; display: inline-block; border:solid 1px #ffffff; text-align: center; line-height: 40px; color:#ffffff; margin-top:16px; margin-left:70px;}
 .zcy_adv1Msg a:hover{color:#1a8def; background: #ffffff;}
 .zcy_advPic{float:left; width:100%; margin-top:20px;margin-left:70px; text-align: center;  }
-.zcy_advPic img{height:248px;}
+.zcy_advPic img{height:360px;}
 .zcy_adv2{width:100%; overflow: hidden;}
 .zcy_adv2 dl dt{float:left; width:100%; }
 .zcy_adv2 dl dt h2{font-size:25px; color:#ffffff; font-weight: lighter;}
@@ -1733,7 +1736,7 @@
 .zcy_indexSideR ul li span.act{background:url(../img/index_mapbg_hover.png) no-repeat; color:#1a8dee; cursor: pointer;}
 
 /*-----2017-07-31-------*/
-/*-----涓汉涓績-------*/
+/*-----涓汉涓績-------*/
 .zcy_userCenterTag{width:1200px; margin:0 auto; overflow: hidden;box-shadow:0px 1px 5px #e1e1e1;}
 .zcy_UCfoot{width:100%; height:20px; box-shadow:0px 1px 5px #e1e1e1; background: #ffffff;}
 .zcy_userCenterTagBox{width:100%; height:80px; background:#39699a;}
@@ -1868,7 +1871,7 @@
 .zcy_ucEjectMsg dl dd{margin-left:80px;}
 .zcy_ucEjectMsg dl dd p{font-size:14px; line-height: 100px;;}
 
-/*-----涓汉涓績-鎶ュ憡涓€瑙�-------*/
+/*-----涓汉涓績-鎶ュ憡涓€瑙�-------*/
 .zcy_ucReporeTagBox{float:left; width:100%; height:60px; background: #ffffff; box-shadow:0px 1px 5px #e1e1e1; }
 .zcy_ucReporeTag{float:left; height:60px; padding:10px 0; box-sizing: border-box; }
 .zcy_ucReporeTag a{float:left; line-height: 40px; font-size:16px; width:130px; text-align: center; color:#333333; border-right: solid 1px #c9c9c9;}
@@ -2083,7 +2086,7 @@
 .zcy_ucTerminalChart{width:100%; overflow: hidden; text-align: center;margin-top:20px;}
 .zcy_ucTerminalBox{width:100%; overflow: hidden;}
 
-/*-----涓汉涓績-鎶ュ憡涓€瑙�-缃戠粶鍙嬪ソ娴嬭瘯-------*/
+/*-----涓汉涓績-鎶ュ憡涓€瑙�-缃戠粶鍙嬪ソ娴嬭瘯-------*/
 .zcy_ucNetwork{width:100%; overflow: hidden; margin-top:20px;}
 .zcy_ucNetworkTag{width:100%; height:40px;}
 .zcy_ucNetworkTag a{width:33%; height:40px; display: inline-block; line-height: 40px; background:url(../img/uc_webTagBG.png) repeat-x 0 0; text-align: center; font-size: 18px;}
@@ -2096,7 +2099,7 @@
 
 .zcy_ucWebMsg table tr td.rightBorder{border-bottom:solid 1px #dceffe;}
 
-/*-----涓汉涓績-娑堟伅涓績-------*/
+/*-----涓汉涓績-娑堟伅涓績-------*/
 .zcy_ucNewsList{width:100%; overflow: hidden;}
 .zcy_ucNewsList ul li{width:100%; line-height: 40px; border-bottom: solid 1px #dceffe;}
 .zcy_ucNewsList ul li span{float:right; color:#999999}
@@ -2106,7 +2109,7 @@
 .zcy_ucNewsDetail p{ font-size:16px; line-height:30px; color:#666666; text-align: left; text-indent: 2em; margin-top:10px;}
 .zcy_ucNewsDetail p.pic{text-indent: 0; text-align: center;}
 
-/*-----涓汉涓績-鐢ㄦ埛淇℃伅-------*/
+/*-----涓汉涓績-鐢ㄦ埛淇℃伅-------*/
 .zcy_ucPersonal{width:100%; overflow: hidden;}
 
 .zcy_ucPerTitle{float:left; width:100%; border-bottom: solid 1px #eeeeee; overflow: hidden;}
@@ -2155,7 +2158,7 @@
 .zcy_ucSave h1{font-size:24px; color:#333333; line-height: 50px; text-align: center; font-weight: normal;}
 .zcy_ucSave p{text-align: center; padding:20px 0; }
 
-/*-----涓汉涓績-璐︽埛浣欓-------*/
+/*-----涓汉涓績-璐︽埛浣欓-------*/
 .zcy_ucAccount{width:100%; overflow: hidden; padding:20px;}
 .zcy_ucAccount p{font-size:16px; color:#333333; line-height: 40px;}
 
@@ -2165,7 +2168,7 @@
 .zcy_ucPay a:hover{border:solid 1px #1d7fd1}
 .zcy_ucPay a.act{border:solid 1px #1d7fd1}
 
-/*-----涓汉涓績-浼樻儬鍒�-------*/
+/*-----涓汉涓績-浼樻儬鍒�-------*/
 .zcy_ucTestCoupon_rule{position:relative; float:right;}
 .zcy_ucTestCoupon_rule a{display:inline-block; color:#333333; line-height: 40px; padding-left:40px; margin-left:50px; }
 .zcy_ucTestCoupon_rule a.rule{background:url(../img/coupon1.png) no-repeat 0 0}
@@ -2268,7 +2271,7 @@
 .zcy_CusForm p{font-size: 14px; line-height: 30px;text-align: center; font-weight: normal;color: #ff0000;}
 
 /*-----鍏充簬鎴戜滑-------*/
-.zcy_AboutBanner{position:relative; width:100%; height:330px; text-align:center; background: url(../img/about_banner.png) no-repeat; -webkit-background-size: 100% 100%; -o-background-size: 100% 100%;}
+.zcy_AboutBanner{position:relative; width:100%; height:422px; text-align:center; background: url(../img/about_banner.jpg) top center;}
 .zcy_aboutTag{position:absolute; bottom:0; left:36%;  width:400px; height:40px; line-height: 40px;  color:#ffffff; text-align: center;}
 .zcy_aboutTag a{width:190px; height:40px; line-height: 40px; display: inline-block;color:#ffffff; font-size:18px;}
 .zcy_aboutTag a:hover{background: #f8f8f8; color:#37689c}
@@ -2320,7 +2323,7 @@
 .zcy_indexBannerMsg {cursor:pointer;}
 
 
-/*鐧诲綍娉ㄥ唽鏍峰紡淇敼*/
+/*鐧诲綍娉ㄥ唽鏍峰紡淇敼*/
 #tip_span_email{width:100%; color:#e34f5a; padding-left:20px; background: url(../img/icon4.png) no-repeat; display:none;clear:both;line-height: 27px}
 /*.loginInt span{display:none;}*/
 /*.zcy_autoLogin span{display:block;}*/
@@ -2370,7 +2373,7 @@ color:#ccc;
 .zcy_ucTdShear > .bdsharebuttonbox > a.qq{background: url(../img/share.png) no-repeat -65px 0;}
 .zcy_ucTdShear > .bdsharebuttonbox > a.wx{background: url(../img/share.png) no-repeat -100px 0;}
 
-/*PublicStyle.css涓瑕嗙洊鐨勫睘鎬�*/
+/*PublicStyle.css涓瑕嗙洊鐨勫睘鎬�*/
 a:hover{color:#1d7fd1;}
 .zcy_indexFootSer p a:hover{color:#1d7fd1;}
 .zcy_indexFootNews ul li a:hover{color:#1d7fd1;}
@@ -2496,7 +2499,7 @@ a:hover{color:#1d7fd1;}
     width: 100%;
 
 }
-/* 涔濆鏍� */
+/* 涔濆鏍� */
 .squared_outer {
     width: 90%;
     margin: 2rem auto;
@@ -2648,7 +2651,7 @@ a:hover{color:#1d7fd1;}
     margin: auto;
     width: 80%;
 }
-/* 涔濆鏍� */
+/* 涔濆鏍� */
 .squaredai_outer {
     width: 100%;
     padding: 2rem 0;
@@ -2810,11 +2813,11 @@ a:hover{color:#1d7fd1;}
     width: 80px;
     height: 80px;
     margin-top: 5px;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 .byl_zcy_indexIncrement .byl_box2 dl dd {
-    margin-left: 160px;
-    margin-top: 70px;
+    margin-left: 140px;
+    margin-top: 50px;
 }
 .byl_zcy_indexIncrement .byl_box2 h2 {
     color: #ffffff;

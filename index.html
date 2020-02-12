@@ -5,11 +5,40 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>k8splus-首页</title>
-    <!--<link rel="stylesheet" type="text/css" href="css/layui.css?v=7380"/>-->
+    <link rel="stylesheet" type="text/css" href="css/layui.css?v=7380"/>
     <link rel="stylesheet" type="text/css" href="css/PublicStyle.css?v=7380" />
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link rel="shortcut icon" href="img/logo_ico.ico" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.css?v=7380"/>
+    <link rel="shortcut icon" href="img/logoico.ico" />
 
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/animateToClass.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/swiper.js"></script>
+
+
+    <script type="text/javascript" src="echarts-html5-canvas-map/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="echarts-html5-canvas-map/js/echarts.min.js"></script>
+    <script type="text/javascript" src="echarts-html5-canvas-map/js/china.js"></script>
+
+
+
+    <!--<script type='text/javascript'>-->
+        <!--var _vds = _vds || [];-->
+        <!--window._vds = _vds;-->
+        <!--(function () {-->
+            <!--_vds.push(['setAccountId', 'a7441887fcf4e086']);-->
+            <!--(function () {-->
+                <!--var vds = document.createElement('script');-->
+                <!--vds.type = 'text/javascript';-->
+                <!--vds.async = true;-->
+                <!--vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';-->
+                <!--var s = document.getElementsByTagName('script')[0];-->
+                <!--s.parentNode.insertBefore(vds, s);-->
+            <!--})();-->
+        <!--})();-->
+    <!--</script>-->
 </head>
 <body style="background: #f8f8f8; " class="fontFace">
 
@@ -17,38 +46,111 @@
     .zcy_menu a span{margin-top:15px;height:30px;}
 
 </style>
-
-<div class="zcy_indexBannerAndNav" style="height: 550px">
-    <div class="zcy_indexBanner">
-        <div class="zcy_indexBannerMsg" style="background: url(img/banner-t4.png) no-repeat center;background-size: 100% 100%;-moz-background-size: 100% 100%;">
-
-
-            <div class="zcy_indexBannerMsg_No4" style="text-align: center">
-
-                <h1 style="margin-top: 150px;font-size: 35px;color:#ffffff;width: 550px">面向项目的容器云管理平台</h1>
-                <p style="width:550px;font-size: 20px;text-align: center">K8sPlus是面向项目的容器云管理平台，为用户提供<br>以多集群、多租户为核心的资源管理能力，以应用商店、可视化编排为核心的应用部署能力。</p>
-            </div>
-
-            <div  style="position:absolute; top:0; left:0; width:100%; height:89px;">
-                <div class="zcy_nav">
-                    <div class="zcy_logo"><a href="index3.html"><img src="img/k8s-icon2.png" style="margin-top: 20px;height: 58px;width: 240px"></a></div>
-                    <div class="zcy_menu" >
-                        <b><a href="index3.html" style="color: #ffffff">首页</a></b>
-                        <!--<b><a href="product.html" class="navTag">产品概述</a></b>-->
-                        <!--<b><a href="CarryoutPlan.html" class="navTag">实施案例</a></b>-->
-                        <b><a href="https://lionelpang.github.io/k8splus/docs/" target="_blank" style="color: #ffffff">帮助文档</a></b>
-                        <!--<b><a href="updateHistory.html">发布订阅</a></b>-->
-                        <!--<a href=""style="margin-right:0">关于我们</a>-->
-                    </div>
-                </div>
+<div class="zcy_topBox">
+    <div class="zcy_top">
+        <!--<p>面向项目的容器云管理平台</p>-->
+        <!--<button class="yellow">注册</button>-->
+        <button style="color: white;font-size: 14px" onclick="location.href='./docs'">使用手册</button>
+    </div>
+<!--</div>-->
+<div class="zcy_indexBannerAndNav" >
+    <div class="zcy_INnavBox">
+        <div class="zcy_nav">
+            <div class="zcy_logo"><a href="index.html"><img src="img/logo.png" style="margin-top: 20px"></a></div>
+            <div class="zcy_menu">
+                <b><a href="index.html" >首页</a></b>
+                    <b><a href="product.html" class="navTag">产品概述</a></b>
+                        <b><a href="CarryoutPlan.html" class="navTag">实施案例</a></b>
+                <!--<a href="">帮助文档</a>-->
+                            <b><a href="updateHistory.html">发布订阅</a></b>
+                <!--<a href=""style="margin-right:0">关于我们</a>-->
             </div>
         </div>
     </div>
+    <div class="zcy_indexBanner">
+        <div class="zcy_indexBannerMsg No4 ">
+                <div class="zcy_indexBannerMsg_No4"></div>
+        </div>
+        <div class="zcy_indexBannerMsg No2 none" >
+            <div class="zcy_indexBannerMsg_No2"></div>
+            <!--<div class="zcy_indexBannerMsg_No6">-->
+            <!--</div>-->
+        </div>
+        <div class="zcy_indexBannerMsg No3 none" >
+            <div class="zcy_indexBannerMsg_No3"></div>
+        </div>
+        <!--<div class="zcy_indexBannerMsg No1 none">
+            <img src="img/banner1.jpg" >
+        </div>
+        <div class="zcy_indexBannerMsg No2 none" >
+            <div class="zcy_indexBannerMsg_No2">
+                <h1>远程真机调试，快速定位问题</h1>
+                <span style="margin-left:205px">远程单步调试</span>
+                <span style="margin-left:105px">脚本录制回放 在线真机录制</span>
+                <span style="margin-left:95px">异常分析</span>
+                <a href="javascript:void(0)">进入测试</a>
+            </div>
+        </div>
+        <div class="zcy_indexBannerMsg No3 none" >
+            <div class="zcy_indexBannerMsg_No3">
 
-</div>
+                <h1>真人众测平台</h1>
+                <p>真实用户场景，及时发现问题</p>
+            </div>
+        </div>-->
+
+        <div class="zcy_indexBannerTag">
+            <a href="javascript:void(0)" class="act"></a>
+            <a href="javascript:void(0)"></a>
+            <a href="javascript:void(0)"></a>
+            <!--<a href="javascript:void(0)"></a>
+            <a href="javascript:void(0)"></a>
+            <a href="javascript:void(0)"></a>-->
+
+        </div>
+    </div></div>
 
 <script type="text/javascript">
+    $(function () {
+        var index = 0,intertime = 7000;
+        var inter = setInterval(scrollBan, intertime);
 
+        $(".zcy_indexBannerTag a").click(function () {
+            index = $(this).index();
+            $(".zcy_indexBannerTag a").removeClass("act").removeAttr("style");
+            $(this).animate({ width: "28px", height: "8px", opacity: 1 }, 500);
+            $(this).parents(".zcy_indexBanner").find(".zcy_indexBannerMsg").hide().eq($(this).index()).fadeIn();
+        });
+
+        $(".zcy_indexBannerTag a").mouseenter(function () {
+            clearInterval(inter);
+        });
+        $(".zcy_indexBannerTag a").mouseleave(function () {
+            inter = setInterval(scrollBan, intertime)
+        });
+        function scrollBan()
+        {
+            index++;
+            if (index == 4)
+                index = 0;
+
+            var ba = $(".zcy_indexBannerTag a");
+            ba.removeClass("act").removeAttr("style").eq(index).animate({ width: "28px", height: "8px", opacity: 1 }, 500);
+            ba.eq(index).parents(".zcy_indexBanner").find(".zcy_indexBannerMsg").hide().eq(ba.eq(index).index()).fadeIn();
+        }
+        $(".News").mouseover(function () {
+            $('.News ul').css("display",'block');
+        });
+        $(".News").mouseout(function () {
+            $('.News ul').css("display",'none');
+        });
+        $(".UserId").mouseover(function () {
+            $('.UserId ul').css("display",'block');
+        });
+        $(".UserId").mouseout(function () {
+            $('.UserId ul').css("display",'none');
+        });
+    });
 </script>
 
 <div class="zcy_indexPlan">
@@ -59,32 +161,32 @@
             <div class="byl_indexPlanMsg">
                 <ul class="byl_show">
                     <li class="byl_li1">
-                        <img src="img/bushu.png" class = "icon_fontSize">
+                        <img src="img/indexPic1.png">
                         <h2>自动化部署</h2>
                         <p>轻松实现一键多集群安装</p>
                     </li>
                     <li class="byl_li2">
-                        <img src="img/icon--2.png" class = "icon_fontSize">
+                        <img src="img/indexPic2.png">
                         <h2>集约化管理</h2>
                         <p>集群资源动态调配</p>
                     </li>
                     <li class="byl_li3">
-                        <img src="img/16-2.png" class = "icon_fontSize">
+                        <img src="img/indexPic3.png">
                         <h2>镜像一点管控</h2>
                         <p>对业务镜像进行一点管控</p>
                     </li>
                     <li class="byl_li4">
-                        <img src="img/yiji-shujuguandaoguankongtai.png" class = "icon_fontSize">
+                        <img src="img/indexPic4.png">
                         <h2>项目组多角色多权限控制</h2>
                         <p>多种角色管理</p>
                     </li>
                     <li class="byl_li5">
-                        <img src="img/jiankong.png" class = "icon_fontSize">
+                        <img src="img/indexPic5.png">
                         <h2>服务监控</h2>
                         <p>服务可视化监控</p>
                     </li>
                     <li class="byl_li6">
-                        <img src="img/rizhi.png" class = "icon_fontSize">
+                        <img src="img/indexPic6.png">
                         <h2>日志管理统一管理</h2>
                         <p>日志收集，界面可视化</p>
                     </li>
@@ -93,18 +195,125 @@
         </div>
     </div>
 </div>
-<br><br>
+<div class="zcy_indexAdv"  style="background: #3171e9;">
+    <div class="zcy_indexAdvBox">
+        <div class="zcy_indexAdvL" style="margin-bottom: 200px">
 
-<div class="zcy_indexIncrement" style="background-color: white">
-    <div class="byl_zcy_indexIncrement"  style="background-color: white">
-        <div class="byl_zcy_indexIncrementBox"  style="background-color: white">
+            <a href="javascript:void(0);">k8s一键部署</a>
+            <a href="javascript:void(0);">自动离线安装</a>
+            <a href="javascript:void(0);">应用轻松部署</a>
+            <a href="javascript:void(0);">日志统一管理</a>
+            <a href="javascript:void(0);">资源一目了然</a>
+            <a href="javascript:void(0);">系统集中监控</a>
+            <a href="javascript:void(0);">简化k8s依赖</a>
+
+        </div>
+        <h1 >我们的优势</h1>
+
+        <div class="zcy_indexAdvR">
+            <div class="zcy_adv1">
+                <div class="zcy_adv1Msg">
+                    <h2>k8s一键部署</h2>
+                    <ul>
+                        <li>提供界面化的安装方式，撇掉繁琐的参数配置和命令过程</li>
+
+                    </ul>
+                </div>
+                <div class="zcy_advPic">
+                    <img src="img/indexAdv1.png">
+                </div>
+            </div>
+        </div>
+        <div class="zcy_indexAdvR none">
+            <div class="zcy_adv1">
+                <div class="zcy_adv1Msg">
+                    <h2>自动离线安装</h2>
+                    <ul>
+                        <li>实现 全离线安装，可轻松部署k8s集群</li>
+                    </ul>
+                </div>
+                <div class="zcy_advPic" style="">
+                    <img src="img/indexAdv2.png">
+                </div>
+            </div>
+        </div>
+        <div class="zcy_indexAdvR none">
+            <div class="zcy_adv1">
+                <div class="zcy_adv1Msg">
+                    <h2>应用轻松部署 </h2>
+                    <ul>
+                        <li >提供界面化自动化应用部署，轻松实现镜像制作、部署服务</li>
+                    </ul>
+                </div>
+                <div class="zcy_advPic">
+                    <img src="img/indexAdv3.png" style="height:360px">
+                </div>
+            </div>
+        </div>
+        <div class="zcy_indexAdvR none">
+            <div class="zcy_adv1">
+                <div class="zcy_adv1Msg">
+                    <h2>日志统一管理</h2>
+                    <ul>
+                        <li >从各个主机中收集日志，界面化查询日志</li>
+                    </ul>
+                </div>
+                <div class="zcy_advPic" style="text-align:left;">
+                    <img src="img/indexAdv4.png">
+                </div>
+            </div>
+        </div>
+        <div class="zcy_indexAdvR none">
+            <div class="zcy_adv1">
+                <div class="zcy_adv1Msg">
+                    <h2>资源一目了然</h2>
+                    <ul>
+                        <li >对主机、应用运行状态可视化监控</li>
+                    </ul>
+                </div>
+                <div class="zcy_advPic" style="text-align: left;">
+                    <img src="img/indexAdv5.png">
+                </div>
+            </div>
+        </div>
+        <div class="zcy_indexAdvR none">
+            <div class="zcy_adv1">
+                <div class="zcy_adv1Msg">
+                    <h2>系统集中监控</h2>
+                    <ul>
+                        <li >通过界面化使用k8s ,简化对k8s概念的理解</li>
+                    </ul>
+                </div>
+                <div class="zcy_advPic" style="text-align: left;">
+                    <img src="img/indexAdv6.png">
+                </div>
+            </div>
+        </div>
+        <div class="zcy_indexAdvR none">
+            <div class="zcy_adv1">
+                <div class="zcy_adv1Msg">
+                    <h2>简化k8s依赖</h2>
+                    <ul>
+                        <li >集成界面对镜像进行统一管理,无需单独登录镜像库进行操作</li>
+                    </ul>
+                </div>
+                <div class="zcy_advPic" style="text-align: left;">
+                    <img src="img/indexAdv7.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="zcy_indexIncrement" >
+    <div class="byl_zcy_indexIncrement"  >
+        <div class="byl_zcy_indexIncrementBox"  >
             <!--<h1></h1>-->
             <br>
             <br>
             <div class="byl_zcy_indexIncMsg" >
                 <div class="byl_box1" >
                     <div class="byl_No1">
-                        <img src="img/yunrongqi.png" class="bylimg80">
+                        <img src="img/indexInc10.png" class="bylimg80">
                         <h2>应用容器化</h2>
                         <em></em>
                         <p>交付标准化、环境标准化、组件重用化</p>
@@ -114,7 +323,7 @@
                     <div class="byl_box2" >
                         <div class="byl_No2" >
                             <dl>
-                                <dt><img src="img/ziyuantiaodu.png" class="bylimg80"></dt>
+                                <dt><img src="img/indexInc6.png" class="bylimg80"></dt>
                                 <dd>
                                     <h2>资源调度</h2>
                                     <em></em>
@@ -126,7 +335,7 @@
                     <div class="byl_box2">
                         <div class="byl_No3" >
                             <dl>
-                                <dt><img src="img/jiankong2.png" class="bylimg80"></dt>
+                                <dt><img src="img/indexInc7.png" class="bylimg80"></dt>
                                 <dd>
                                     <h2>应用监控</h2>
                                     <em></em>
@@ -138,7 +347,7 @@
                     <div class="byl_box2">
                         <div class="byl_No4" >
                             <dl>
-                                <dt><img src="img/gaiicon-.png" class="bylimg80"></dt>
+                                <dt><img src="img/indexInc8.png" class="bylimg80"></dt>
                                 <dd>
                                     <h2>应用管理</h2>
                                     <em></em>
@@ -150,7 +359,7 @@
                     <div class="byl_box2">
                         <div class="byl_No5" >
                             <dl>
-                                <dt><img src="img/devops2.png" style="height: 70px;width: 100px" class="bylimg80"></dt>
+                                <dt><img src="img/indexInc9.png" class="bylimg80"></dt>
                                 <dd>
                                     <h2>Dev ops</h2>
                                     <em></em>
@@ -164,36 +373,96 @@
         </div>
     </div>
 </div>
+<div class="zcy_indexSide" style="height: 800px">
+    <div style="height: 800px;width: 1000px">
+        <iframe src="echarts-html5-canvas-map/index.html" frameborder="0" width="1000" scrolling="No" height="800" leftmargin="0" topmargin="0"></iframe>
+    </div>
+    <div class="zcy_indexSideR" style="float: right;margin-right: 50px;margin-top: -700px">
+
+        <ul>
+            <li>
+                <span>吉林联通</span>
+                <div class="zcy_indexSideContact none">
+                    <p>应用项目:易受理、极客创新中心</p>
+                    <p>规模：8台<i>  平稳运行19+个月</i></p>
+                </div>
+            </li>
+            <li>
+                <span>云南联通信息化</span>
+                <div class="zcy_indexSideContact none">
+                    <p>应用项目:微服务框架、接口云化、BO云化、统一开通云化</p>
+                    <p>规模：30台<i>  平稳运行12+个月</i></p>
+                </div>
+            </li>
+            <li>
+                <span>云南联通运营公司</span>
+                <div class="zcy_indexSideContact none">
+                    <p>应用项目:微服务框架、微信公众平台、KPI展示系统</p>
+                    <p>规模：14台<i>  平稳运行12+个月</i></p>
+                </div>
+            </li>
+            <li>
+                <span>山东联通</span>
+                <div class="zcy_indexSideContact none">
+                    <p>应用项目:激励中心</p>
+                    <p>规模：28台<i>  平稳运行3+个月</i></p>
+                </div>
+            </li>
+            <li>
+                <span>海南、内蒙、湖北</span>
+                <div class="zcy_indexSideContact none">
+                    <p>应用项目:培训完成</p>
+                </div>
+            </li>
+            <li>
+                <span>西藏、青海联通</span>
+                <div class="zcy_indexSideContact none">
+                    <p>应用项目:统一云化开通</p>
+                    <p>规模：10台<i>  评估态</i></p>
+                </div>
+            </li>
+            <li>
+                <span>福建</span>
+                <div class="zcy_indexSideContact none">
+                    <p>应用项目:能力平台服务</p>
+                    <p>规模：3台<i>  试用中</i></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
 
 
 <style>
-    .zcy_indexFootSer p em{margin:0 10px;}
-    .zcy_indexBanner{position:absolute; top:0px; left:0; width:100%; height:550px;}
+.zcy_indexFootSer p em{margin:0 10px;}
+.zcy_indexBanner{position:absolute; top:100px; left:0; width:100%; height:550px;}
 
-    .zcy_indexBannerMsg{width:100%; height:550px;  -webkit-background-size: contain; -o-background-size: cover; z-index:-1;}
+.zcy_indexBannerMsg{width:100%; height:550px;  -webkit-background-size: contain; -o-background-size: cover; z-index:-1;}
 
 
-    .zcy_indexBannerMsg.No6{background: url(./img/banner2.jpg)}
-    .icon_fontSize {
-     width: 100px;
-        height: 80px;
+.zcy_indexBannerMsg.No6{background: url(./img/index_banner2.jpg)}
 
-    }
-    .zcy_indexBannerMsg img{width:100%; height:550px; }
-    .zcy_indexSideContact{width:100%; height:100px; background: #eeeeee;}
-    /*.zcy_indexSide{width:100%; height:650px; background: url(../img/index_mapBanner.png)no-repeat center; -webkit-background-size: cover; -o-background-size: cover; margin:0 auto; }*/
+.zcy_indexBannerMsg img{width:100%; height:550px; }
+.zcy_indexSideContact{width:100%; height:100px; background: #eeeeee;}
+/*.zcy_indexSide{width:100%; height:650px; background: url(../img/index_mapBanner.png)no-repeat center; -webkit-background-size: cover; -o-background-size: cover; margin:0 auto; }*/
 
-    #china-map {
-        width: 500px;
-        height: 500px;
-        margin: auto;
-        background: red;
-    }
+#china-map {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background: red;
+}
 </style>
 
-
+<script type="text/javascript">
+    var zcy_floatBottom = $(".zcy_floatBottom");
+    if (zcy_floatBottom && zcy_floatBottom.length > 0) {
+        $("#zcy_floatBottom_fix").height(zcy_floatBottom[0].clientHeight);
+    }
+</script>
 <div style="display: none;">
-    <!--<script type="text/javascript">var cnzz_protoco l = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259146455'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259146455' type='text/javascript'%3E%3C/script%3E"));</script>-->
+    <!--<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259146455'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259146455' type='text/javascript'%3E%3C/script%3E"));</script>-->
 </div>
 
 <div class="zcy_indexCopy">
@@ -206,7 +475,58 @@
 
 
 <script type="text/javascript">
+    $(function () {
 
+        var flag = true;
+        $(window).scroll(function (e) {
+            // if ($(window).scrollTop() > ($(".zcy_indexPlatform").position().top - $(".zcy_indexPlatform").height()) && flag)
+            // {
+            //     flag = false;
+            //     $('.timer').each(count);
+            // }
+        });
+        $(".zcy_indexAdvL a").mouseover(function () {
+            $(".zcy_indexAdvR").finish().hide("normal").eq($(this).index()).show("normal");
+        });
+        $('.zcy_indexSide').click(function(){
+            // showTime();
+        });
+        $(".zcy_indexShow a").click(function () {
+            $(this).text() == "收起" ? $(this).text("查看更多").parent().prev().css("height", "560px") : $(this).text("收起").parent().prev().css("height", "auto");
+        });
+
+
+
+        //五大优势
+        $('.byl_zcy_indexIncrement .byl_box1').hover(function(){
+            $(this).children('div.byl_hover1').finish().animate({top:0},300);
+        },function(){
+            $(this).children('div.byl_hover1').finish().animate({top:-440},300);
+        });
+        $('.byl_zcy_indexIncrement .byl_box2').hover(function(){
+            $(this).children('div.byl_hover2').finish().animate({top:0},200);
+        },function(){
+            $(this).children('div.byl_hover2').finish().animate({top:-225},200);
+        });
+        $(".zcy_indexPartnerBox a").mouseenter(function () {
+            $(this).find("img").removeClass("gray");
+        });
+
+        $(".zcy_indexPartnerBox a").mouseleave(function () {
+            $(this).find("img").addClass("gray");
+        });
+        //一站式
+        $(".byl_indexPlanMsg ul li").mouseover(function(){
+            var i = $(".byl_indexPlanMsg ul li").index(this);
+            console.log(i);
+            $(".byl_hide li").fadeOut(200).eq(i).finish().fadeIn(200);
+            $(".byl_hide li").eq(i).mouseleave(function () {
+                $(this).fadeOut(200);
+            });
+        });
+
+
+    });
 
 
 

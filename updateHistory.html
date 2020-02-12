@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>k8splus-发布订阅</title>
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, user-scalable=yes"-->
+    <meta id="vp" name="viewport" content="width=device-width, initial-scale=0.4, minimum-scale=0.4, maximum-scale=2.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="css/PublicStyle.css?v=7380" />
+    <link rel="stylesheet" type="text/css" href="css/layui.css?v=7380"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logoico.ico" />
+    <script src='js/jquery-3.1.1.js'></script>
+    <script src="js/animateToClass.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body style="background: #f8f8f8; ">
+
+<div class="zcy_topBox" style="height: 35px">
+    <div class="zcy_top">
+        <!--<p>面向项目的容器云管理平台</p>-->
+        <!--<button class="yellow">注册</button>-->
+        <button style="color: white;font-size: 14px;margin-top:0px" onclick="location.href='./docs'">使用手册</button>
+    </div>
+</div>
+<div class="zcy_indexBannerAndNav" style="height:89px;">
+    <div class="zcy_INnavBox">
+        <div class="zcy_nav">
+            <div class="zcy_logo"><a href="index.html"><img src="img/logo.png" style="margin-top: 20px"></a></div>
+            <div class="zcy_menu">
+                <b><a href="index.html" >首页</a></b>
+                    <b><a href="product.html" class="navTag">产品概述</a></b>
+                        <b><a href="CarryoutPlan.html" class="navTag">实施案例</a></b>
+                <!--<a href="">帮助文档</a>-->
+                            <b> <a href="updateHistory.html">发布订阅</a></b>
+                <!--<a href=""style="margin-right:0">关于我们</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var index = 0,intertime = 7000;
+        var inter = setInterval(scrollBan, intertime);
+
+        $(".zcy_indexBannerTag a").click(function () {
+            index = $(this).index();
+            $(".zcy_indexBannerTag a").removeClass("act").removeAttr("style");
+            $(this).animate({ width: "28px", height: "8px", opacity: 1 }, 500);
+            $(this).parents(".zcy_indexBanner").find(".zcy_indexBannerMsg").hide().eq($(this).index()).fadeIn();
+        });
+
+        $(".zcy_indexBannerTag a").mouseenter(function () {
+            clearInterval(inter);
+        });
+        $(".zcy_indexBannerTag a").mouseleave(function () {
+            inter = setInterval(scrollBan, intertime)
+        });
+        function scrollBan()
+        {
+            index++;
+            if (index == 4)
+                index = 0;
+
+            var ba = $(".zcy_indexBannerTag a");
+            ba.removeClass("act").removeAttr("style").eq(index).animate({ width: "28px", height: "8px", opacity: 1 }, 500);
+            ba.eq(index).parents(".zcy_indexBanner").find(".zcy_indexBannerMsg").hide().eq(ba.eq(index).index()).fadeIn();
+        }
+        $(".News").mouseover(function () {
+            $('.News ul').css("display",'block');
+        });
+        $(".News").mouseout(function () {
+            $('.News ul').css("display",'none');
+        });
+        $(".UserId").mouseover(function () {
+            $('.UserId ul').css("display",'block');
+        });
+        $(".UserId").mouseout(function () {
+            $('.UserId ul').css("display",'none');
+        });
+    });
+</script>
+
+
+<div class="zcy_helpBanner">
+    <h1>发布订阅</h1>
+    <h2>在每个版本中，采用多次迭代完成目标。可通过订阅方式留下您的邮箱，在每次版本发布时<br> 我们将新版本的功能，获取路径方式，更新方法发送到您的邮箱中。通过点击订阅进行订阅。</h2>
+</div>
+<div class="zcy_styleTitle"><h1>历史版本</h1></div>
+
+<!--<div class="layui-tab layui-tab-brief zcy_styleTag" lay-filter="docDemoTabBrief">-->
+    <!--<div class="layui-tab-content">-->
+        <!--<div class="layui-tab-item layui-show">-->
+            <!--<div class="zcy_helpMsgBoxR" style="width: auto;float:inherit;">-->
+                <!--<ul id="list">-->
+                    <!--<li id="23">-->
+                        <!--<h1> V1.1.1</h1>-->
+                        <!--<p>-->
+                            <!--<span class = "history_title">+ 功能1           实现可行安装功能，满足后续的添加</span><br>-->
+                            <!--<span class = "history_title">+ 功能2           实现可行的安装功能，满足后续的添加</span><br>-->
+                            <!--<span class = "history_title">+ 功能3            实现可行安装功能，满足后续的添加</span><br>-->
+                            <!--<span class = "history_title">+ 下载地址：</span><br>-->
+                            <!--<span class = "history_title"> http://pan.baidu.com/sfdafsadfas</span>-->
+                        <!--</p>-->
+                    <!--</li><li id="24">-->
+                    <!--<h1>V1.1.0</h1>-->
+                    <!--<p>-->
+                        <!--<span class = "history_title">+ 功能1           实现可行安装功能，满足后续的添加</span><br>-->
+                        <!--<span class = "history_title">+ 功能2           实现可行的安装功能，满足后续的添加</span><br>-->
+                        <!--<span class = "history_title">+ 功能3            实现可行安装功能，满足后续的添加</span><br>-->
+                        <!--<span class = "history_title">+ 下载地址：</span><br>-->
+                        <!--<span class = "history_title"> http://pan.baidu.com/sfdafsadfas</span>-->
+                     <!--</li><li id="26">-->
+                    <!--<h1>V1.0</h1>-->
+                    <!--<p>-->
+                        <!--<span class = "history_title">+ 功能1           实现可行安装功能，满足后续的添加</span><br>-->
+                        <!--<span class = "history_title">+ 功能2           实现可行的安装功能，满足后续的添加</span><br>-->
+                        <!--<span class = "history_title">+ 功能3            实现可行安装功能，满足后续的添加</span><br>-->
+                        <!--<span class = "history_title">+ 下载地址：</span><br>-->
+                        <!--<span class = "history_title"> http://pan.baidu.com/sfdafsadfas</span>-->
+            <!--</div>-->
+        <!--</div>-->
+
+             <!--</div>-->
+<!--</div>-->
+
+
+<div class="box">
+    <ul id="first-list">
+        <li>
+            <span></span>
+            <div class="title">V1.1.1</div>
+            <div class="info">Bugs
+
+            </div><br>
+            <div class="info">
+                * 修复负载均衡添加时，当添加已有NodePort时服务报错的问题；
+            </div>
+            <div class="info">* 修复我的项目-服务列表-回滚失败，回滚列表展示及回滚过程失败；</div>
+            <div class="info">* 修复创建clusterip时，未使用用户填写的clusterip错误；</div><br><br>
+            <div class="info">Improvements</div><br>
+            <div class="info">^ 分配资源分区，默认使用租户编码/密码作为镜像库秘钥，避免因为新建分区忘记配置秘钥而无法发布服务的错误；</div>
+            <div class="info">^ 优化configmap/secret在服务中挂载时设置模式由8进制转为十进制功能，让使用者可以使用更加方便的8进制进行设置；</div>
+            <div class="info">^ 在项目中的服务、均衡负载、横向扩容、ingress、configmap、secret、存储管理增加搜索功能；</div>
+            <div class="info">^ 项目中的列表又原来的5条一分页，增加到10条一分页；</div>
+            <div class="info">^ 我的服务中增加存活检测和健康监测的时间配置入口，满足使用者依据自己的服务启动时间设置检测启始时间；</div>
+            <div class="info">^ 优化前端表格、按钮、布局、风格宽度、大小，统一界面风格。</div>
+            <div class="info">New Features</div>
+            <div class="info">+ 增加审计服务，记录下使用者操作，满足系统层面的操作痕迹审计功能；</div>
+            <div class="info">+ 为应用组件商店提供导入/导出工具，实现一个包包含镜像、模版文件、配置项定义的传递功能。满足组件彼此间的传递和分享；</div>
+            <div class="info">+ 在镜像管理，提供镜像上传功能，满足在封闭内网环境中也可以通过k8splus界面推送镜像到镜像仓库中；</div>
+            <div class="info">+ 在镜像管理中，提供jar/war包的镜像制作功能，简化对一些简单镜像的制作过程；</div>
+            <div class="info">+ 提供管理员依据不同的用户创建api token功能，满足第三方服务无需登录名和密码可调用平台api；</div>
+            <div class="info">+ 在租户管理中的租户详情中提供查看租户登陆密码，满足使用者在特殊情况下可通过k8splus后台查看密码后可登陆集成服务，例如harbor。</div><br><br>
+            <div class="info">Dependency Upgrade</div><br>
+            <div class="info">无</div><br><br>
+            <a class="info" href="product.html" >Asserts</a><br>
+            <div class="info">            链接:<a href="https://pan.baidu.com/s/100q1_eYhhMae_mPyMbJ1Zg" target="_blank">https://pan.baidu.com/s/100q1_eYhhMae_mPyMbJ1Zg</a> 密码:tzy
+            </div><br>
+            <!--<div class="info">链接:https://pan.baidu.com/s/100q1_eYhhMae_mPyMbJ1Zg  密码:tzyy</div><br>-->
+            <!--Asserts-->
+            <!--<a class="info" href="product.html" style="color: #2980B9">安装程序(.zip)</a><br>-->
+
+            <a class="info"  href="./docs" style="color: #2980B9">安装手册</a>
+
+
+            <!--<div class="name">- dr. mohamed -</div>-->
+            <div class="time">
+                <span>2019/01/12<br>V1.1.1</span>
+                <!--<span>V1.1.1</span>-->
+            </div>
+        </li>
+        <!--<li>-->
+            <!--<span></span>-->
+            <!--<div class="title">V1.1.1</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="time">-->
+                <!--<span>2019/01/12<br>V1.1.1</span>-->
+                <!--&lt;!&ndash;<span>V1.1.1</span>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span></span>-->
+            <!--<div class="title">V1.1.1</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="info">+ 功能1           实现可行安装功能，满足后续的添加</div>-->
+            <!--<div class="time">-->
+                <!--<span>2019/01/12<br>V1.1.1</span>-->
+                <!--&lt;!&ndash;<span>V1.1.1</span>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</li>-->
+
+    </ul>
+
+
+
+    <ul id="second-list">
+        <li>
+            <span></span>
+            <div class="title">comment #03</div>
+            <div class="info">the best animation , the best toturials you would ever see .</div>
+            <div class="name">- mohamed -</div>
+            <div class="time">
+                <span>MAR, 21<sup>st</sup></span>
+                <span>03:49 PM</span>
+            </div>
+        </li>
+        <li>
+            <span></span>
+            <div class="title">summery #02</div>
+            <div class="info">the best animation , the best toturials you would ever see here only . you can learn how to animate and how to use SVG . even else you can add your own animations .</div>
+            <div class="name">- mohamed -</div>
+            <div class="time">
+                <span>MAY, 13<sup>rd</sup></span>
+                <span>09:23 AM</span>
+            </div>
+        </li>
+        <li>
+            <span></span>
+            <div class="title">comment #04</div>
+            <div class="info">the best animation , the best toturials you would ever see . what about canvas ?? do you like it ..</div>
+            <div class="name">- mohamed -</div>
+            <div class="time">
+                <span>OCT, 15<sup>th</sup></span>
+                <span>08:30 PM</span>
+            </div>
+        </li>
+
+        <div class="arrow" id="btn2">
+
+
+        </div>
+    </ul>
+
+    <!--<script src="JavaScript/timeline-V2.js"></script>-->
+</div>
+
+<div class="zcy_indexCopy">
+    <p>保留所有权利©2019. Asiainfo CUC 技术中心解决方案部联系方式：liuyang@asiainfo.com</p>
+</div>
+<style>.zcy_indexFootSer p em{margin:0 10px;}
+
+.history_title{
+  color:rgb(51, 51, 51);
+  font-family:Microsoft Yahei;
+  font-size:16px;
+  background-color:rgb(248, 248, 248);
+}
+
+</style>
+
+
+<div id="zcy_floatBottom_fix"></div>
+<script type="text/javascript">
+    var zcy_floatBottom = $(".zcy_floatBottom");
+    if (zcy_floatBottom && zcy_floatBottom.length > 0) {
+        $("#zcy_floatBottom_fix").height(zcy_floatBottom[0].clientHeight);
+    }
+</script>
+<div style="display: none;">
+    <!--<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259146455'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259146455' type='text/javascript'%3E%3C/script%3E"));</script>-->
+</div>
+</body>
+</html>
+
+
+<script>
+    //Demo
+    // layui.use('element', function () {
+    //
+    // });
+</script>
